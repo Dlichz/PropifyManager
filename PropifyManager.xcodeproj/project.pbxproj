@@ -14,6 +14,20 @@
 		21BA7EA42D61B36C008EE413 /* PropifyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EA32D61B36C008EE413 /* PropifyManagerTests.swift */; };
 		21BA7EAE2D61B36C008EE413 /* PropifyManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EAD2D61B36C008EE413 /* PropifyManagerUITests.swift */; };
 		21BA7EB02D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */; };
+		21BA7EDC2D61B39C008EE413 /* PaymentsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */; };
+		21BA7EDD2D61B39C008EE413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */; };
+		21BA7EDE2D61B39C008EE413 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC02D61B39C008EE413 /* Tenant.swift */; };
+		21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */; };
+		21BA7EE02D61B39C008EE413 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC42D61B39C008EE413 /* ViewModel.swift */; };
+		21BA7EE12D61B39C008EE413 /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC92D61B39C008EE413 /* AddTenant.swift */; };
+		21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ECB2D61B39C008EE413 /* ContractView.swift */; };
+		21BA7EE32D61B39C008EE413 /* EditDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */; };
+		21BA7EE42D61B39C008EE413 /* TenantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */; };
+		21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */; };
+		21BA7EE82D61B412008EE413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EE72D61B412008EE413 /* FirebaseAnalytics */; };
+		21BA7EEA2D61B412008EE413 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */; };
+		21BA7EEC2D61B412008EE413 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EEB2D61B412008EE413 /* FirebaseDatabase */; };
+		21BA7EEE2D61B412008EE413 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EED2D61B412008EE413 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +58,16 @@
 		21BA7EA92D61B36C008EE413 /* PropifyManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropifyManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BA7EAD2D61B36C008EE413 /* PropifyManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerUITests.swift; sourceTree = "<group>"; };
 		21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsDashboard.swift; sourceTree = "<group>"; };
+		21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21BA7EC02D61B39C008EE413 /* Tenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
+		21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDashBoardView.swift; sourceTree = "<group>"; };
+		21BA7EC42D61B39C008EE413 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		21BA7EC92D61B39C008EE413 /* AddTenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
+		21BA7ECB2D61B39C008EE413 /* ContractView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractView.swift; sourceTree = "<group>"; };
+		21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailView.swift; sourceTree = "<group>"; };
+		21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDetailView.swift; sourceTree = "<group>"; };
+		21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTicketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BA7EEC2D61B412008EE413 /* FirebaseDatabase in Frameworks */,
+				21BA7EEE2D61B412008EE413 /* FirebaseFirestore in Frameworks */,
+				21BA7EE82D61B412008EE413 /* FirebaseAnalytics in Frameworks */,
+				21BA7EEA2D61B412008EE413 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +122,15 @@
 		21BA7E912D61B36B008EE413 /* PropifyManager */ = {
 			isa = PBXGroup;
 			children = (
+				21BA7EBE2D61B39B008EE413 /* InmueblesDashboard */,
+				21BA7EC72D61B39C008EE413 /* MainDashboard */,
+				21BA7EBD2D61B39B008EE413 /* PaymentsDashboard */,
+				21BA7EC82D61B39C008EE413 /* ReportesDashboard */,
+				21BA7EDB2D61B39C008EE413 /* TenantDashboard */,
 				21BA7E922D61B36B008EE413 /* PropifyManagerApp.swift */,
 				21BA7E942D61B36B008EE413 /* ContentView.swift */,
 				21BA7E962D61B36C008EE413 /* Assets.xcassets */,
+				21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */,
 				21BA7E982D61B36C008EE413 /* Preview Content */,
 			);
 			path = PropifyManager;
@@ -127,6 +161,186 @@
 			path = PropifyManagerUITests;
 			sourceTree = "<group>";
 		};
+		21BA7EBD2D61B39B008EE413 /* PaymentsDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */,
+			);
+			path = PaymentsDashboard;
+			sourceTree = "<group>";
+		};
+		21BA7EBE2D61B39B008EE413 /* InmueblesDashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InmueblesDashboard;
+			sourceTree = "<group>";
+		};
+		21BA7EC12D61B39C008EE413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC02D61B39C008EE413 /* Tenant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21BA7EC32D61B39C008EE413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21BA7EC52D61B39C008EE413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC42D61B39C008EE413 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21BA7EC62D61B39C008EE413 /* TenantList */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC12D61B39C008EE413 /* Model */,
+				21BA7EC32D61B39C008EE413 /* View */,
+				21BA7EC52D61B39C008EE413 /* ViewModel */,
+			);
+			path = TenantList;
+			sourceTree = "<group>";
+		};
+		21BA7EC72D61B39C008EE413 /* MainDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC62D61B39C008EE413 /* TenantList */,
+			);
+			path = MainDashboard;
+			sourceTree = "<group>";
+		};
+		21BA7EC82D61B39C008EE413 /* ReportesDashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReportesDashboard;
+			sourceTree = "<group>";
+		};
+		21BA7ECA2D61B39C008EE413 /* AddTenant */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC92D61B39C008EE413 /* AddTenant.swift */,
+			);
+			path = AddTenant;
+			sourceTree = "<group>";
+		};
+		21BA7ECC2D61B39C008EE413 /* ContractView */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ECB2D61B39C008EE413 /* ContractView.swift */,
+			);
+			path = ContractView;
+			sourceTree = "<group>";
+		};
+		21BA7ECD2D61B39C008EE413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21BA7ECF2D61B39C008EE413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21BA7ED02D61B39C008EE413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21BA7ED12D61B39C008EE413 /* EditTenantInformationModule */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ECD2D61B39C008EE413 /* Model */,
+				21BA7ECF2D61B39C008EE413 /* View */,
+				21BA7ED02D61B39C008EE413 /* ViewModel */,
+			);
+			path = EditTenantInformationModule;
+			sourceTree = "<group>";
+		};
+		21BA7ED22D61B39C008EE413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21BA7ED42D61B39C008EE413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21BA7ED52D61B39C008EE413 /* TenantDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ED22D61B39C008EE413 /* Model */,
+				21BA7ED42D61B39C008EE413 /* View */,
+			);
+			path = TenantDetailView;
+			sourceTree = "<group>";
+		};
+		21BA7ED62D61B39C008EE413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21BA7ED82D61B39C008EE413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21BA7ED92D61B39C008EE413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21BA7EDA2D61B39C008EE413 /* TicketOfPaymentModule */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ED62D61B39C008EE413 /* Model */,
+				21BA7ED82D61B39C008EE413 /* View */,
+				21BA7ED92D61B39C008EE413 /* ViewModel */,
+			);
+			path = TicketOfPaymentModule;
+			sourceTree = "<group>";
+		};
+		21BA7EDB2D61B39C008EE413 /* TenantDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ECA2D61B39C008EE413 /* AddTenant */,
+				21BA7ECC2D61B39C008EE413 /* ContractView */,
+				21BA7ED12D61B39C008EE413 /* EditTenantInformationModule */,
+				21BA7ED52D61B39C008EE413 /* TenantDetailView */,
+				21BA7EDA2D61B39C008EE413 /* TicketOfPaymentModule */,
+			);
+			path = TenantDashboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +357,12 @@
 			dependencies = (
 			);
 			name = PropifyManager;
+			packageProductDependencies = (
+				21BA7EE72D61B412008EE413 /* FirebaseAnalytics */,
+				21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */,
+				21BA7EEB2D61B412008EE413 /* FirebaseDatabase */,
+				21BA7EED2D61B412008EE413 /* FirebaseFirestore */,
+			);
 			productName = PropifyManager;
 			productReference = 21BA7E8F2D61B36B008EE413 /* PropifyManager.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +435,9 @@
 				Base,
 			);
 			mainGroup = 21BA7E862D61B36B008EE413;
+			packageReferences = (
+				21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 21BA7E902D61B36B008EE413 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +456,7 @@
 			files = (
 				21BA7E9A2D61B36C008EE413 /* Preview Assets.xcassets in Resources */,
 				21BA7E972D61B36C008EE413 /* Assets.xcassets in Resources */,
+				21BA7EDD2D61B39C008EE413 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +481,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BA7EE12D61B39C008EE413 /* AddTenant.swift in Sources */,
+				21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */,
+				21BA7EE42D61B39C008EE413 /* TenantDetailView.swift in Sources */,
 				21BA7E952D61B36B008EE413 /* ContentView.swift in Sources */,
+				21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */,
+				21BA7EE32D61B39C008EE413 /* EditDetailView.swift in Sources */,
+				21BA7EDE2D61B39C008EE413 /* Tenant.swift in Sources */,
 				21BA7E932D61B36B008EE413 /* PropifyManagerApp.swift in Sources */,
+				21BA7EE02D61B39C008EE413 /* ViewModel.swift in Sources */,
+				21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */,
+				21BA7EDC2D61B39C008EE413 /* PaymentsDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +658,12 @@
 				DEVELOPMENT_TEAM = 8V8ZQ8R5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PropifyManager;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +671,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlichz.PropifyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,11 +692,12 @@
 				DEVELOPMENT_TEAM = 8V8ZQ8R5D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PropifyManager;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +705,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dlichz.PropifyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +831,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21BA7EE72D61B412008EE413 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		21BA7EEB2D61B412008EE413 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		21BA7EED2D61B412008EE413 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21BA7E872D61B36B008EE413 /* Project object */;
 }
