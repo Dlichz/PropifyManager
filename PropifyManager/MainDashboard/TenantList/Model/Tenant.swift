@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import FirebaseFirestore
+//import FirebaseFirestore
 
 struct Tenant: Identifiable, Codable {
-    @DocumentID var id: String? // Firestore usará este ID
+    var id = UUID()
     
     // Información personal
     var firstName: String
@@ -93,32 +93,32 @@ extension Date {
     }
 }
 
-class FirestoreManager: ObservableObject {
-    private let db = Firestore.firestore()
-    
-    func addTenant(_ tenant: Tenant, completion: @escaping (Bool) -> Void) {
-        do {
-            let _ = try db.collection("tenants").addDocument(from: tenant)
-            completion(true)
-        } catch {
-            print("Error al guardar inquilino: \(error)")
-            completion(false)
-        }
-    }
-    
-    func getTenants(completion: @escaping ([Tenant]) -> Void) {
-        db.collection("tenants").getDocuments { snapshot, error in
-            if let error = error {
-                print("Error obteniendo inquilinos: \(error)")
-                completion([])
-                return
-            }
-            
-            let tenants = snapshot?.documents.compactMap { doc -> Tenant? in
-                try? doc.data(as: Tenant.self)
-            } ?? []
-            
-            completion(tenants)
-        }
-    }
-}
+//class FirestoreManager: ObservableObject {
+//    private let db = Firestore.firestore()
+//    
+//    func addTenant(_ tenant: Tenant, completion: @escaping (Bool) -> Void) {
+//        do {
+//            let _ = try db.collection("tenants").addDocument(from: tenant)
+//            completion(true)
+//        } catch {
+//            print("Error al guardar inquilino: \(error)")
+//            completion(false)
+//        }
+//    }
+//    
+//    func getTenants(completion: @escaping ([Tenant]) -> Void) {
+//        db.collection("tenants").getDocuments { snapshot, error in
+//            if let error = error {
+//                print("Error obteniendo inquilinos: \(error)")
+//                completion([])
+//                return
+//            }
+//            
+//            let tenants = snapshot?.documents.compactMap { doc -> Tenant? in
+//                try? doc.data(as: Tenant.self)
+//            } ?? []
+//            
+//            completion(tenants)
+//        }
+//    }
+//}

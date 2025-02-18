@@ -44,10 +44,7 @@ struct TenantDetailView: View {
                         .foregroundColor(.gray)
                 } else {
                     ForEach(paymentHistory, id: \.id) { payment in
-                        Button(action: {
-                            selectedPayment = payment
-                            showPaymentTicket.toggle()
-                        }) {
+                        NavigationLink(destination: PaymentTicketView(payment: payment, tenant: tenant)) {
                             HStack {
                                 Text(payment.date.formatted(date: .numeric, time: .omitted))
                                 Spacer()
@@ -85,9 +82,6 @@ struct TenantDetailView: View {
         }
         .sheet(isPresented: $showContract) {
             ContractView(tenant: tenant)
-        }
-        .sheet(item: $selectedPayment) { payment in
-            PaymentTicketView(payment: payment, tenant: tenant)
         }
     }
 }

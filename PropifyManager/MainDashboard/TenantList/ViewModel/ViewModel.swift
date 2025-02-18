@@ -6,43 +6,59 @@
 //
 
 import Foundation
-import UserNotifications
 
-class AddTenantViewModel {
-    // Función para calcular la próxima fecha de pago a partir de la fecha de inicio del contrato.
-    func calculateNextPaymentDate(from contractStart: Date) -> Date? {
-        return Calendar.current.date(byAdding: .month, value: 1, to: contractStart)
-    }
+class TenantViewModel: ObservableObject {
+    @Published var tenants: [Tenant]
     
-    // Función para programar una notificación unos días antes de la próxima fecha de pago.
-    func schedulePaymentNotification(for tenantName: String, paymentDate: Date, daysBefore: Int = 3) {
-        // Crea el contenido de la notificación.
-        let content = UNMutableNotificationContent()
-        content.title = "Pago Próximo"
-        content.body = "El pago para \(tenantName) vence pronto. Recuerda recordarle."
-        content.sound = .default
+    @Published var searchText: String = ""
+    @Published var filterByMonth: String = ""
+    
+    var filteredTenants: [Tenant] {
+        var tenants = self.tenants
         
-        // Calcula la fecha de la notificación restando 'daysBefore' días a la fecha de pago.
-        guard let notificationDate = Calendar.current.date(byAdding: .day, value: -daysBefore, to: paymentDate) else {
-            return
-        }
-        
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate)
-        
-        // Crea el trigger para la notificación.
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        
-        // Crea la solicitud de notificación.
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        // Programa la notificación.
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Error al programar la notificación: \(error.localizedDescription)")
-            } else {
-                print("Notificación programada para: \(notificationDate)")
+        // Filtrar por nombre
+        if !searchText.isEmpty {
+            tenants = tenants.filter {
+                $0.fullName.localizedCaseInsensitiveContains(searchText)
             }
         }
+        
+        // Filtrar por mes (si se selecciona)
+        if !filterByMonth.isEmpty {
+            tenants = tenants.filter {
+                guard let nextPaymentDate = $0.nextPaymentDate else { return false }
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MMMM"
+                return dateFormatter.string(from: nextPaymentDate) == filterByMonth
+            }
+        }
+        
+        return tenants
     }
     
+    // Lista de meses para el filtro
+    var months: [String] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter.monthSymbols
+    }
+    
+    init() {
+        // Datos dummy
+        self.tenants = [
+            Tenant(firstName: "Francisco David", lastName: "Zárate", email: "davidzarate33@gmail.com", contractStart: Date().addingTimeInterval(-60 * 60 * 24 * 30), paymentStatus: .current),
+            Tenant(firstName: "Pedro", lastName: "Pascal", email: "PedroPascal@gmail.com", contractStart: Date().addingTimeInterval(-60 * 60 * 24 * 30), paymentStatus: .current),
+            Tenant(firstName: "Juan", lastName: "Fernandez", email: "Fernandez33@gmail.com", contractStart: Date().addingTimeInterval(-60 * 60 * 24 * 30), paymentStatus: .current),
+            Tenant(firstName: "Lorena", lastName: "Vásquez", email: "lorenaemoxita@gmail.com", contractStart: Date().addingTimeInterval(-60 * 60 * 24 * 30), paymentStatus: .current),
+            Tenant(firstName: "Juan", lastName: "Pérez", email: "juan@example.com", phoneNumber: "1234567890", contractStart: Date(), contractEnd: nil, nextPaymentDate: Date().addingTimeInterval(86400 * 10), paymentStatus: .current),
+            Tenant(firstName: "Ana", lastName: "Gómez", email: "ana@example.com", phoneNumber: "0987654321", contractStart: Date(), contractEnd: nil, nextPaymentDate: Date().addingTimeInterval(-86400 * 5), paymentStatus: .overdue),
+            Tenant(firstName: "Luis", lastName: "Martínez", email: "luis@example.com", phoneNumber: "5555555555", contractStart: Date(), contractEnd: nil, nextPaymentDate: Date().addingTimeInterval(86400 * 2), paymentStatus: .upcoming),
+            Tenant(firstName: "María", lastName: "López", email: "maria@example.com", phoneNumber: "6666666666", contractStart: Date(), contractEnd: nil, nextPaymentDate: nil, paymentStatus: .inactive)
+        ]
+    }
+    
+    func fetchTenants() {
+        // Aquí puedes simular la carga de datos, como si vinieran de Firebase
+        print("Cargando inquilinos: \(tenants)")
+    }
 }

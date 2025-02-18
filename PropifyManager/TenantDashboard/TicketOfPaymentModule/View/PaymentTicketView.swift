@@ -10,7 +10,8 @@ import SwiftUI
 struct PaymentTicketView: View {
     let payment: Payment
     let tenant: Tenant
-    @State private var capturedImage: UIImage?
+    
+    @State private var imageToShare: UIImage?
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -44,7 +45,7 @@ struct PaymentTicketView: View {
             .padding()
             
             // Vista previa de la imagen capturada (solo para depuración)
-            if let capturedImage = capturedImage {
+            if let capturedImage = imageToShare {
                 Image(uiImage: capturedImage)
                     .resizable()
                     .scaledToFit()
@@ -52,7 +53,7 @@ struct PaymentTicketView: View {
                     .padding()
             }
             
-            Button(action: captureAndShare) {
+            Button(action: captureScreenAndShare) {
                 HStack {
                     Image(systemName: "arrowshape.turn.up.right")
                     Text("Compartir por WhatsApp")
@@ -78,37 +79,26 @@ struct PaymentTicketView: View {
         }
     }
     
-    func captureAndShare() {
-        // Captura la imagen
-        let image = self.snapshot()
-        capturedImage = image // Muestra la imagen capturada en la vista previa
+    func captureScreenAndShare() {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first else { return }
         
-        // Guarda la imagen en un archivo temporal
-        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
-            alertMessage = "No se pudo convertir la imagen a Data."
-            showAlert = true
-            return
+        let renderer = UIGraphicsImageRenderer(size: window.bounds.size)
+        let image = renderer.image { ctx in
+            window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
         }
+
+        shareImage(image)
+    }
+    
+    // Función para compartir la imagen usando UIActivityViewController
+    func shareImage(_ image: UIImage) {
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         
-        let tempFileURL = FileManager.default.temporaryDirectory.appendingPathComponent("ticket.jpg")
-        do {
-            try imageData.write(to: tempFileURL)
-            
-            // Crea un UIActivityViewController para compartir la imagen y el texto
-            let activityVC = UIActivityViewController(
-                activityItems: [ticketText, tempFileURL],
-                applicationActivities: nil
-            )
-            
-            // Presenta el UIActivityViewController desde la ventana activa
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-               let rootViewController = windowScene.windows.first?.rootViewController {
-                activityVC.popoverPresentationController?.sourceView = rootViewController.view
-                rootViewController.present(activityVC, animated: true, completion: nil)
-            }
-        } catch {
-            alertMessage = "No se pudo guardar la imagen temporalmente."
-            showAlert = true
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = scene.windows.first {
+            window.rootViewController?.present(activityVC, animated: true, completion: nil)
         }
     }
+    
 }

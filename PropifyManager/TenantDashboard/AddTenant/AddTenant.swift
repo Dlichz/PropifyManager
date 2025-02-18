@@ -10,7 +10,7 @@ import PhotosUI
 
 struct AddTenantView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject private var firestoreManager = FirestoreManager()
+//    @StateObject private var firestoreManager = FirestoreManager()
     
     // Información personal
     @State private var firstName: String = ""
@@ -131,7 +131,7 @@ struct AddTenantView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Guardar") {
-                        saveTenant()
+//                        saveTenant()
                     }
                     .disabled(firstName.isEmpty || lastName.isEmpty || email.isEmpty || rentAmount.isEmpty)
                 }
@@ -153,18 +153,18 @@ struct AddTenantView: View {
     }
     
     // Función para guardar el inquilino
-    private func saveTenant() {
-        let tenant = Tenant(firstName: firstName,
-                            lastName: lastName,
-                            email: email,
-                            contractStart:
-                                contractStart,
-                            paymentStatus: .current)
-        
-        firestoreManager.addTenant(tenant) { success in
-            if success {
-                dismiss()
-            }
-        }
-    }
+//    private func saveTenant() {
+//        let tenant = Tenant(firstName: firstName,
+//                            lastName: lastName,
+//                            email: email,
+//                            contractStart:
+//                                contractStart,
+//                            paymentStatus: .current)
+//        
+//        firestoreManager.addTenant(tenant) { success in
+//            if success {
+//                dismiss()
+//            }
+//        }
+//    }
 }
