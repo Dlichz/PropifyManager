@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct EditTenantView: View {
     @State var tenant: Tenant
     
@@ -62,3 +62,4 @@ struct EditTenantView: View {
         }
     }
 }
+*/

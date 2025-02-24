@@ -8,16 +8,38 @@
 import SwiftUI
 
 struct TenantDashboardView: View {
-    @StateObject private var viewModel = TenantViewModel()
+    @EnvironmentObject var viewModel: TenantDashboardViewModel
     
+    @State private var searchText = ""
+    @State private var filterByMonth = ""
+
+    var filteredTenants: [Tenant] {
+        var tenants = viewModel.tenants
+        
+        if !searchText.isEmpty {
+            tenants = tenants.filter { $0.fullName.localizedCaseInsensitiveContains(searchText) }
+        }
+        
+        if !filterByMonth.isEmpty {
+            tenants = tenants.filter {
+                guard let nextPaymentDate = $0.nextPaymentDate else { return false }
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MMMM"
+                return dateFormatter.string(from: nextPaymentDate) == filterByMonth
+            }
+        }
+        
+        return tenants
+    }
+
     var body: some View {
         NavigationView {
             VStack {
                 // Barra de búsqueda
-                SearchBar(text: $viewModel.searchText, placeholder: "Buscar por nombre")
+                SearchBar(text: $searchText, placeholder: "Buscar por nombre")
                 
                 // Filtro por mes
-                Picker("Filtrar por mes", selection: $viewModel.filterByMonth) {
+                Picker("Filtrar por mes", selection: $filterByMonth) {
                     Text("Todos").tag("")
                     ForEach(viewModel.months, id: \.self) { month in
                         Text(month).tag(month)
@@ -26,8 +48,7 @@ struct TenantDashboardView: View {
                 .pickerStyle(MenuPickerStyle())
                 .padding(.horizontal)
                 
-                // Lista de inquilinos
-                List(viewModel.filteredTenants) { tenant in
+                List(filteredTenants) { tenant in
                     NavigationLink(destination: TenantDetailView(tenant: tenant)) {
                         TenantRow(tenant: tenant)
                     }
@@ -38,13 +59,14 @@ struct TenantDashboardView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: AddTenantView()) {
-                        Image(systemName: "doc.text")
+                        Image(systemName: "person.fill.badge.plus")
                     }
                 }
             }
         }
     }
 }
+
 
 struct SearchBar: View {
     @Binding var text: String

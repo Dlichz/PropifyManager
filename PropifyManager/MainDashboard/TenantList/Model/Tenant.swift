@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import FirebaseFirestore
 
 struct Tenant: Identifiable, Codable {
     var id = UUID()
@@ -14,8 +13,9 @@ struct Tenant: Identifiable, Codable {
     // Información personal
     var firstName: String
     var lastName: String
-    var email: String
+    var email: String? = ""
     var phoneNumber: String?
+    var imageID: String?
     
     // Detalles del contrato
     var contractStart: Date
@@ -23,6 +23,8 @@ struct Tenant: Identifiable, Codable {
     var lastPaymentDate: Date?
     var nextPaymentDate: Date?
     var paymentStatus: PaymentStatus
+    var rentAmount: String?
+    var notes: String?
     
     // Detalles del inmueble
     var departamento: Inmueble?
@@ -42,7 +44,7 @@ struct Tenant: Identifiable, Codable {
 }
 
 struct Inmueble: Identifiable, Codable {
-    let id: String 
+    let id: UUID
     let name: String
     let direccion: String
     let description: String
@@ -75,7 +77,6 @@ enum PaymentStatus: String, Codable {
     }
 }
 
-// Extensión para manejar fechas en Codable
 extension Date {
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -92,33 +93,3 @@ extension Date {
         self = date
     }
 }
-
-//class FirestoreManager: ObservableObject {
-//    private let db = Firestore.firestore()
-//    
-//    func addTenant(_ tenant: Tenant, completion: @escaping (Bool) -> Void) {
-//        do {
-//            let _ = try db.collection("tenants").addDocument(from: tenant)
-//            completion(true)
-//        } catch {
-//            print("Error al guardar inquilino: \(error)")
-//            completion(false)
-//        }
-//    }
-//    
-//    func getTenants(completion: @escaping ([Tenant]) -> Void) {
-//        db.collection("tenants").getDocuments { snapshot, error in
-//            if let error = error {
-//                print("Error obteniendo inquilinos: \(error)")
-//                completion([])
-//                return
-//            }
-//            
-//            let tenants = snapshot?.documents.compactMap { doc -> Tenant? in
-//                try? doc.data(as: Tenant.self)
-//            } ?? []
-//            
-//            completion(tenants)
-//        }
-//    }
-//}

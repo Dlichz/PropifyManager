@@ -8,42 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    var tenant = Tenant(firstName: "Francisco", lastName: "Zárate Vásquez", email: "davidzarate33@gmail.com", phoneNumber: "9513929968", contractStart: Date(), contractEnd: nil, nextPaymentDate: nil, paymentStatus: .inactive)
+    @StateObject private var tenantDashboardViewModel = TenantDashboardViewModel() // ✅ Se crea aquí
     
+    var tenant = Tenant(firstName: "Francisco", lastName: "Zárate Vásquez", email: "davidzarate33@gmail.com", phoneNumber: "9513929968", contractStart: Date(), contractEnd: nil, nextPaymentDate: nil, paymentStatus: .current, notes: "")
+
     var body: some View {
         TabView {
-            // 1. Dashboard principal
             TenantDashboardView()
                 .tabItem {
                     Label("Dashboard", systemImage: "house.fill")
                 }
 
-            // 2. Pagos
             PaymentsDashboard()
                 .tabItem {
                     Label("Pagos", systemImage: "dollarsign.circle.fill")
                 }
 
-            // 3. Inquilinos
             TenantsView()
                 .tabItem {
                     Label("Inquilinos", systemImage: "person.3.fill")
                 }
 
-            // 4. Departamentos
             ContractView(tenant: tenant)
                 .tabItem {
                     Label("Departamentos", systemImage: "building.fill")
                 }
 
-            // 5. Dashboard de reportes del mes
             ReportsDashboardView()
                 .tabItem {
                     Label("Reportes", systemImage: "chart.bar.fill")
                 }
         }
+        .environmentObject(tenantDashboardViewModel) // ✅ Se pasa a toda la jerarquía de vistas
     }
 }
+
 
 
 struct TenantsView: View {

@@ -10,41 +10,72 @@ import PhotosUI
 
 struct AddTenantView: View {
     @Environment(\.dismiss) var dismiss
-//    @StateObject private var firestoreManager = FirestoreManager()
+    @EnvironmentObject var viewModel: TenantDashboardViewModel
+    
+    var tenant: Tenant?
+    var isEditing: Bool = false
     
     // Información personal
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
-    @State private var email: String = ""
-    @State private var phoneNumber: String = ""
+    let id: UUID?
+    
+    @State private var firstName: String
+    @State private var lastName: String
+    @State private var email: String
+    @State private var phoneNumber: String
     
     // Detalles del contrato
-    @State private var contractStart: Date = Date()
-    @State private var includeContractEnd: Bool = false
-    @State private var contractEnd: Date = Date()
-    @State private var nextPaymentDate: Date = Date()
+    @State private var contractStart: Date
+    @State private var includeContractEnd: Bool
+    @State private var contractEnd: Date
+    @State private var nextPaymentDate: Date
     
     // Información del departamento
     @State private var address: String = ""
     @State private var floor: String = ""
     
     // Servicios incluidos
-    @State private var includesElectricity: Bool = false
-    @State private var includesInternet: Bool = false
-    @State private var includesWater: Bool = false
-    @State private var includesGas: Bool = false
+    @State private var includesElectricity: Bool
+    @State private var includesInternet: Bool
+    @State private var includesWater: Bool
+    @State private var includesGas: Bool
     
     // Renta y depósito
-    @State private var depositGiven: Bool = false
-    @State private var depositAmount: String = ""
-    @State private var rentAmount: String = ""
+    @State private var depositGiven: Bool
+    @State private var depositAmount: String
+    @State private var rentAmount: String
     
     // Observaciones
-    @State private var notes: String = ""
+    @State private var notes: String
     
     // Subida de imágenes
     @State private var selectedImage: UIImage?
     @State private var selectedPhoto: PhotosPickerItem?
+    
+    init(tenant: Tenant? = nil) {
+        self.tenant = tenant
+        self.isEditing = tenant != nil
+        self.id = tenant?.id ?? UUID()
+        
+        // Inicialización de propiedades @State
+        _firstName = State(initialValue: tenant?.firstName ?? "")
+        _lastName = State(initialValue: tenant?.lastName ?? "")
+        _email = State(initialValue: tenant?.email ?? "")
+        _phoneNumber = State(initialValue: tenant?.phoneNumber ?? "")
+        _contractStart = State(initialValue: tenant?.contractStart ?? Date())
+        _includeContractEnd = State(initialValue: tenant?.contractEnd != nil)
+        _contractEnd = State(initialValue: tenant?.contractEnd ?? Date())
+        _nextPaymentDate = State(initialValue: tenant?.nextPaymentDate ?? Date())
+        _address = State(initialValue: "k")
+        _floor = State(initialValue: "")
+        _includesElectricity = State(initialValue: false)
+        _includesInternet = State(initialValue: false)
+        _includesWater = State(initialValue: false)
+        _includesGas = State(initialValue: false)
+        _depositGiven = State(initialValue: false)
+        _depositAmount = State(initialValue: "")
+        _rentAmount = State(initialValue: "")
+        _notes = State(initialValue:"")
+    }
     
     var body: some View {
         NavigationView {
@@ -113,6 +144,14 @@ struct AddTenantView: View {
                             Text("Seleccionar foto")
                         }
                     }
+                    .onChange(of: selectedPhoto) { _, newItem in
+                        Task {
+                            if let data = try? await newItem?.loadTransferable(type: Data.self),
+                               let image = UIImage(data: data) {
+                                selectedImage = image
+                            }
+                        }
+                    }
                     
                     if let selectedImage = selectedImage {
                         Image(uiImage: selectedImage)
@@ -122,7 +161,7 @@ struct AddTenantView: View {
                     }
                 }
             }
-            .navigationTitle("Nuevo Inquilino")
+            .navigationTitle(isEditing ? "Editar Inquilino" : "Nuevo Inquilino")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancelar") {
@@ -131,40 +170,43 @@ struct AddTenantView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Guardar") {
-//                        saveTenant()
+                        saveTenant()
                     }
                     .disabled(firstName.isEmpty || lastName.isEmpty || email.isEmpty || rentAmount.isEmpty)
                 }
             }
-            .onChange(of: selectedPhoto) { newItem in
-                loadSelectedImage()
-            }
         }
     }
     
-    // Función para cargar la imagen seleccionada
-    private func loadSelectedImage() {
-        Task {
-            if let data = try? await selectedPhoto?.loadTransferable(type: Data.self),
-               let image = UIImage(data: data) {
-                selectedImage = image
-            }
+    // Función para guardar el nuevo inquilino
+    private func saveTenant() {
+        let newTenant = Tenant(
+            id: id ?? UUID(),
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phoneNumber: phoneNumber,
+            contractStart: contractStart,
+            contractEnd: includeContractEnd ? contractEnd : nil,
+            nextPaymentDate: nextPaymentDate
+            paymentStatus: .current,
+//            address: address,
+//            floor: floor,
+//            includesElectricity: includesElectricity,
+//            includesInternet: includesInternet,
+//            includesWater: includesWater,
+//            includesGas: includesGas,
+//            depositAmount: depositGiven ? Double(depositAmount) : nil,
+//            rentAmount: Double(rentAmount) ?? 0.0,
+//            notes: notes
+        )
+        
+        if isEditing {
+            viewModel.updateTenant(newTenant)
+        } else {
+            viewModel.addTenant(newTenant)
         }
+        
+        dismiss()
     }
-    
-    // Función para guardar el inquilino
-//    private func saveTenant() {
-//        let tenant = Tenant(firstName: firstName,
-//                            lastName: lastName,
-//                            email: email,
-//                            contractStart:
-//                                contractStart,
-//                            paymentStatus: .current)
-//        
-//        firestoreManager.addTenant(tenant) { success in
-//            if success {
-//                dismiss()
-//            }
-//        }
-//    }
 }

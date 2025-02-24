@@ -9,6 +9,9 @@ import SwiftUI
 
 struct TenantDetailView: View {
     let tenant: Tenant
+//    @EnvironmentObject var viewModel: TenantDashboardViewModel
+    @StateObject private var tenantViewModel = TenantDashboardViewModel()
+    
     @State private var selectedPayment: Payment?
     @State private var showPaymentTicket = false
     @State private var isEditing = false
@@ -78,7 +81,7 @@ struct TenantDetailView: View {
             }
         }
         .sheet(isPresented: $isEditing) {
-            EditTenantView(tenant: tenant)
+            AddTenantView(tenant: tenant)
         }
         .sheet(isPresented: $showContract) {
             ContractView(tenant: tenant)
