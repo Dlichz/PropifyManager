@@ -10,7 +10,7 @@ import SwiftUI
 struct TenantDetailView: View {
     let tenant: Tenant
 //    @EnvironmentObject var viewModel: TenantDashboardViewModel
-    @StateObject private var tenantViewModel = TenantDashboardViewModel()
+    @StateObject private var tenantViewModel = AppViewModel()
     
     @State private var selectedPayment: Payment?
     @State private var showPaymentTicket = false

@@ -7,7 +7,11 @@
 
 import Foundation
 
-class TenantDashboardViewModel: ObservableObject {
+class AppViewModel: ObservableObject {
+    
+    @Published var isAuthenticated = false
+
+    
     @Published var tenants: [Tenant] = []
     
     @Published var searchText: String = "H"

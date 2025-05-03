@@ -10,16 +10,15 @@ import Firebase
 
 @main
 struct PropifyManagerApp: App {
-    @StateObject private var tenantDashboardViewModel = TenantDashboardViewModel()
+    @StateObject private var appViewModel = AppViewModel()
     
     init() {
-        FirebaseApp.configure()
     }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(tenantDashboardViewModel)
+                .environmentObject(appViewModel)
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TenantDashboardView: View {
-    @EnvironmentObject var viewModel: TenantDashboardViewModel
+    @EnvironmentObject var viewModel: AppViewModel
     
     @State private var searchText = ""
     @State private var filterByMonth = ""

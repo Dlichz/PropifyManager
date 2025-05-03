@@ -10,7 +10,7 @@ import PhotosUI
 
 struct AddTenantView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: TenantDashboardViewModel
+    @EnvironmentObject var viewModel: AppViewModel
     
     var tenant: Tenant?
     var isEditing: Bool = false
@@ -188,8 +188,8 @@ struct AddTenantView: View {
             phoneNumber: phoneNumber,
             contractStart: contractStart,
             contractEnd: includeContractEnd ? contractEnd : nil,
-            nextPaymentDate: nextPaymentDate
-            paymentStatus: .current,
+            nextPaymentDate: nextPaymentDate,
+            paymentStatus: .current
 //            address: address,
 //            floor: floor,
 //            includesElectricity: includesElectricity,
