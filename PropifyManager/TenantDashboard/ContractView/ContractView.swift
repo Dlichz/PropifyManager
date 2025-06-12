@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContractView: View {
-    let tenant: Tenant
+    let tenant: Inquilino
     
     var body: some View {
         VStack {

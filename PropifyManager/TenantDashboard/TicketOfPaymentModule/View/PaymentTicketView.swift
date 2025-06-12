@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PaymentTicketView: View {
-    let payment: Payment
-    let tenant: Tenant
+    let payment: Pago
+    let tenant: Inquilino
     
     @State private var imageToShare: UIImage?
     @State private var showAlert = false

@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = AppViewModel()
     
-    var tenant = Tenant(firstName: "Francisco", lastName: "Zárate Vásquez", email: "davidzarate33@gmail.com", phoneNumber: "9513929968", contractStart: Date(), contractEnd: nil, nextPaymentDate: nil, paymentStatus: .current, notes: "")
+    var tenant = Inquilino(firstName: "David", lastName: "Zárate", imageID: nil)
 
     var body: some View {
         

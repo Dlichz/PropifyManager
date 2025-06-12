@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct TenantDetailView: View {
-    let tenant: Tenant
+    let tenant: Inquilino
 //    @EnvironmentObject var viewModel: TenantDashboardViewModel
     @StateObject private var tenantViewModel = AppViewModel()
     
-    @State private var selectedPayment: Payment?
+    @State private var selectedPayment: Pago?
     @State private var showPaymentTicket = false
     @State private var isEditing = false
     @State private var showContract = false
     
-    let paymentHistory: [Payment] = [
-        Payment(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 30), amount: 8000),
-        Payment(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 60), amount: 8000),
-        Payment(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 90), amount: 8000)
+    let paymentHistory: [Pago] = [
+        Pago(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 30), amount: 8000),
+        Pago(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 60), amount: 8000),
+        Pago(id: "", date: Date().addingTimeInterval(-60 * 60 * 24 * 90), amount: 8000)
     ]
     
     var body: some View {
@@ -31,14 +31,6 @@ struct TenantDetailView: View {
                 if let phone = tenant.phoneNumber {
                     Text("Teléfono: \(phone)")
                 }
-            }
-            
-            Section(header: Text("Detalles del Contrato")) {
-                Text("Inicio del Contrato: \(tenant.contractStart.formatted(date: .numeric, time: .omitted))")
-                if let contractEnd = tenant.contractEnd {
-                    Text("Fin del Contrato: \(contractEnd.formatted(date: .numeric, time: .omitted))")
-                }
-                Text("Próximo Pago: \(Date())")
             }
             
             Section(header: Text("Historial de Pagos")) {

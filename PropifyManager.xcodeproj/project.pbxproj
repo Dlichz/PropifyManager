@@ -18,7 +18,7 @@
 		21BA7EB02D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */; };
 		21BA7EDC2D61B39C008EE413 /* PaymentsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */; };
 		21BA7EDD2D61B39C008EE413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */; };
-		21BA7EDE2D61B39C008EE413 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC02D61B39C008EE413 /* Tenant.swift */; };
+		21BA7EDE2D61B39C008EE413 /* Inquilino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC02D61B39C008EE413 /* Inquilino.swift */; };
 		21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */; };
 		21BA7EE02D61B39C008EE413 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC42D61B39C008EE413 /* AppViewModel.swift */; };
 		21BA7EE12D61B39C008EE413 /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC92D61B39C008EE413 /* AddTenant.swift */; };
@@ -65,7 +65,7 @@
 		21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsDashboard.swift; sourceTree = "<group>"; };
 		21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		21BA7EC02D61B39C008EE413 /* Tenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
+		21BA7EC02D61B39C008EE413 /* Inquilino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inquilino.swift; sourceTree = "<group>"; };
 		21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDashBoardView.swift; sourceTree = "<group>"; };
 		21BA7EC42D61B39C008EE413 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		21BA7EC92D61B39C008EE413 /* AddTenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		21BA7EC12D61B39C008EE413 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				21BA7EC02D61B39C008EE413 /* Tenant.swift */,
+				21BA7EC02D61B39C008EE413 /* Inquilino.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -555,7 +555,7 @@
 				21BA7EF02D65113B008EE413 /* AddTenantViewModel.swift in Sources */,
 				2163A0062DB9FA8400748106 /* WelcomeView.swift in Sources */,
 				2163A00A2DBA09C800748106 /* LoginView.swift in Sources */,
-				21BA7EDE2D61B39C008EE413 /* Tenant.swift in Sources */,
+				21BA7EDE2D61B39C008EE413 /* Inquilino.swift in Sources */,
 				21BA7E932D61B36B008EE413 /* PropifyManagerApp.swift in Sources */,
 				21BA7EE02D61B39C008EE413 /* AppViewModel.swift in Sources */,
 				21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */,

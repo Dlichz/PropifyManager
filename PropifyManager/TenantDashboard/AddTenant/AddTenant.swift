@@ -12,69 +12,47 @@ struct AddTenantView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AppViewModel
     
-    var tenant: Tenant?
+    var tenant: Inquilino?
     var isEditing: Bool = false
     
     // Información personal
-    let id: UUID?
+    let id = UUID()
     
-    @State private var firstName: String
-    @State private var lastName: String
-    @State private var email: String
-    @State private var phoneNumber: String
+    @State private var firstName: String = "nombre"
+    @State private var lastName: String = "Apellido"
+    @State private var email: String = ""
+    @State private var phoneNumber: String = ""
     
     // Detalles del contrato
-    @State private var contractStart: Date
-    @State private var includeContractEnd: Bool
-    @State private var contractEnd: Date
-    @State private var nextPaymentDate: Date
+    @State private var contractStart: Date = Date()
+    @State private var includeContractEnd: Bool = false
+    @State private var contractEnd: Date = Date() + 1
+    @State private var nextPaymentDate: Date = Date() + 30
     
     // Información del departamento
     @State private var address: String = ""
     @State private var floor: String = ""
     
     // Servicios incluidos
-    @State private var includesElectricity: Bool
-    @State private var includesInternet: Bool
-    @State private var includesWater: Bool
-    @State private var includesGas: Bool
+    @State private var includesElectricity: Bool = false
+    @State private var includesInternet: Bool = false
+    @State private var includesWater: Bool = false
+    @State private var includesGas: Bool = false
     
     // Renta y depósito
-    @State private var depositGiven: Bool
-    @State private var depositAmount: String
-    @State private var rentAmount: String
+    @State private var depositGiven: Bool = false
+    @State private var depositAmount: String = ""
+    @State private var rentAmount: String = ""
     
     // Observaciones
-    @State private var notes: String
+    @State private var notes: String = ""
     
     // Subida de imágenes
     @State private var selectedImage: UIImage?
     @State private var selectedPhoto: PhotosPickerItem?
     
-    init(tenant: Tenant? = nil) {
+    init(tenant: Inquilino) {
         self.tenant = tenant
-        self.isEditing = tenant != nil
-        self.id = tenant?.id ?? UUID()
-        
-        // Inicialización de propiedades @State
-        _firstName = State(initialValue: tenant?.firstName ?? "")
-        _lastName = State(initialValue: tenant?.lastName ?? "")
-        _email = State(initialValue: tenant?.email ?? "")
-        _phoneNumber = State(initialValue: tenant?.phoneNumber ?? "")
-        _contractStart = State(initialValue: tenant?.contractStart ?? Date())
-        _includeContractEnd = State(initialValue: tenant?.contractEnd != nil)
-        _contractEnd = State(initialValue: tenant?.contractEnd ?? Date())
-        _nextPaymentDate = State(initialValue: tenant?.nextPaymentDate ?? Date())
-        _address = State(initialValue: "k")
-        _floor = State(initialValue: "")
-        _includesElectricity = State(initialValue: false)
-        _includesInternet = State(initialValue: false)
-        _includesWater = State(initialValue: false)
-        _includesGas = State(initialValue: false)
-        _depositGiven = State(initialValue: false)
-        _depositAmount = State(initialValue: "")
-        _rentAmount = State(initialValue: "")
-        _notes = State(initialValue:"")
     }
     
     var body: some View {
@@ -86,7 +64,7 @@ struct AddTenantView: View {
                         .autocapitalization(.words)
                     TextField("Apellido", text: $lastName)
                         .autocapitalization(.words)
-                    TextField("Correo Electrónico", text: $email)
+                    TextField("Correo electrónico", text: $email)
                         .keyboardType(.emailAddress)
                     TextField("Teléfono", text: $phoneNumber)
                         .keyboardType(.phonePad)
@@ -180,26 +158,7 @@ struct AddTenantView: View {
     
     // Función para guardar el nuevo inquilino
     private func saveTenant() {
-        let newTenant = Tenant(
-            id: id ?? UUID(),
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phoneNumber: phoneNumber,
-            contractStart: contractStart,
-            contractEnd: includeContractEnd ? contractEnd : nil,
-            nextPaymentDate: nextPaymentDate,
-            paymentStatus: .current
-//            address: address,
-//            floor: floor,
-//            includesElectricity: includesElectricity,
-//            includesInternet: includesInternet,
-//            includesWater: includesWater,
-//            includesGas: includesGas,
-//            depositAmount: depositGiven ? Double(depositAmount) : nil,
-//            rentAmount: Double(rentAmount) ?? 0.0,
-//            notes: notes
-        )
+        let newTenant = Inquilino(firstName: "David Zárate", lastName: "Vásquez")
         
         if isEditing {
             viewModel.updateTenant(newTenant)
