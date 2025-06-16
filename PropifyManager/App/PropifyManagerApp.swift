@@ -10,15 +10,13 @@ import Firebase
 
 @main
 struct PropifyManagerApp: App {
-    @StateObject private var appViewModel = AppViewModel()
     
     init() {
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(appViewModel)
+            MainTabView()
         }
     }
 }

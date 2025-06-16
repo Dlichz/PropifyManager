@@ -10,7 +10,7 @@ import PhotosUI
 
 struct AddTenantView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: AppViewModel
+//    @EnvironmentObject var viewModel: AppViewModel
     
     var tenant: Inquilino?
     var isEditing: Bool = false
@@ -161,9 +161,9 @@ struct AddTenantView: View {
         let newTenant = Inquilino(firstName: "David Zárate", lastName: "Vásquez")
         
         if isEditing {
-            viewModel.updateTenant(newTenant)
+//            viewModel.updateTenant(newTenant)
         } else {
-            viewModel.addTenant(newTenant)
+//            viewModel.addTenant(newTenant)
         }
         
         dismiss()

@@ -16,14 +16,15 @@ struct PaymentTicketView: View {
     @State private var alertMessage = ""
     
     var formattedDate: String {
-        payment.date.formatted(date: .numeric, time: .omitted)
+//        payment.date.formatted(date: .numeric, time: .omitted)
+        "23"
     }
     
     var ticketText: String {
         return """
         🏠 **Inquilino:** \(tenant.firstName) \(tenant.lastName)
         📅 **Fecha:** \(formattedDate)
-        💰 **Monto:** $\(String(format: "%.2f", payment.amount))
+        💰 **Monto:** $34343
         """
     }
     
@@ -37,7 +38,7 @@ struct PaymentTicketView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text("🏠 **Inquilino:** \(tenant.firstName) \(tenant.lastName)")
                 Text("📅 **Fecha:** \(formattedDate)")
-                Text("💰 **Monto:** $\(String(format: "%.2f", payment.amount))")
+                Text("💰 **Monto:** $12")
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)

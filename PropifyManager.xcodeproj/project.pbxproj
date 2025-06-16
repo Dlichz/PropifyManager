@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213DB1A82DFD291300BD10A1 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1A72DFD290E00BD10A1 /* MainTabView.swift */; };
+		213DB1AA2DFD2BFA00BD10A1 /* Inmueble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1A92DFD2BF100BD10A1 /* Inmueble.swift */; };
+		213DB1AC2DFD2C3200BD10A1 /* Contrato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1AB2DFD2C2C00BD10A1 /* Contrato.swift */; };
+		213DB1AE2DFD2C8400BD10A1 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1AD2DFD2C6C00BD10A1 /* DateFormatter+Extensions.swift */; };
+		213DB1B02DFD2CB200BD10A1 /* Pago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1AF2DFD2CAD00BD10A1 /* Pago.swift */; };
+		213DB1B52DFD2FFA00BD10A1 /* InmueblesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1B42DFD2FFA00BD10A1 /* InmueblesViewModel.swift */; };
+		213DB1B72DFD301D00BD10A1 /* InmueblesDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1B62DFD301D00BD10A1 /* InmueblesDashboardView.swift */; };
+		213DB1BB2DFD338900BD10A1 /* InmuebleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1BA2DFD338900BD10A1 /* InmuebleRowView.swift */; };
+		213DB1BD2DFD33BC00BD10A1 /* InmuebleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1BC2DFD33BC00BD10A1 /* InmuebleDetailView.swift */; };
+		213DB1C12DFD340F00BD10A1 /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1C02DFD340F00BD10A1 /* StatCard.swift */; };
+		213DB1C32DFD3E3500BD10A1 /* InquilinosDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1C22DFD3E3500BD10A1 /* InquilinosDashboardView.swift */; };
+		213DB1C52DFD3F0100BD10A1 /* HistorialInquilino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1C42DFD3F0100BD10A1 /* HistorialInquilino.swift */; };
+		213DB1C82DFD3F1400BD10A1 /* EditarInquilinoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1C62DFD3F1400BD10A1 /* EditarInquilinoView.swift */; };
+		213DB1C92DFD3F1400BD10A1 /* InquilinoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1C72DFD3F1400BD10A1 /* InquilinoDetailView.swift */; };
+		213DB1CB2DFD3F8200BD10A1 /* EstadoPago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213DB1CA2DFD3F8200BD10A1 /* EstadoPago.swift */; };
 		2163A0062DB9FA8400748106 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163A0052DB9FA7B00748106 /* WelcomeView.swift */; };
 		2163A00A2DBA09C800748106 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163A0092DBA09C800748106 /* LoginView.swift */; };
 		21BA7E932D61B36B008EE413 /* PropifyManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7E922D61B36B008EE413 /* PropifyManagerApp.swift */; };
-		21BA7E952D61B36B008EE413 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7E942D61B36B008EE413 /* ContentView.swift */; };
 		21BA7E972D61B36C008EE413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BA7E962D61B36C008EE413 /* Assets.xcassets */; };
 		21BA7E9A2D61B36C008EE413 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BA7E992D61B36C008EE413 /* Preview Assets.xcassets */; };
 		21BA7EA42D61B36C008EE413 /* PropifyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EA32D61B36C008EE413 /* PropifyManagerTests.swift */; };
 		21BA7EAE2D61B36C008EE413 /* PropifyManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EAD2D61B36C008EE413 /* PropifyManagerUITests.swift */; };
 		21BA7EB02D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */; };
-		21BA7EDC2D61B39C008EE413 /* PaymentsDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */; };
 		21BA7EDD2D61B39C008EE413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */; };
 		21BA7EDE2D61B39C008EE413 /* Inquilino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC02D61B39C008EE413 /* Inquilino.swift */; };
 		21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */; };
-		21BA7EE02D61B39C008EE413 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC42D61B39C008EE413 /* AppViewModel.swift */; };
 		21BA7EE12D61B39C008EE413 /* AddTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EC92D61B39C008EE413 /* AddTenant.swift */; };
 		21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ECB2D61B39C008EE413 /* ContractView.swift */; };
-		21BA7EE32D61B39C008EE413 /* EditDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */; };
 		21BA7EE42D61B39C008EE413 /* TenantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */; };
 		21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */; };
 		21BA7EE82D61B412008EE413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EE72D61B412008EE413 /* FirebaseAnalytics */; };
@@ -51,11 +62,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		213DB1A72DFD290E00BD10A1 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		213DB1A92DFD2BF100BD10A1 /* Inmueble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inmueble.swift; sourceTree = "<group>"; };
+		213DB1AB2DFD2C2C00BD10A1 /* Contrato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contrato.swift; sourceTree = "<group>"; };
+		213DB1AD2DFD2C6C00BD10A1 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		213DB1AF2DFD2CAD00BD10A1 /* Pago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago.swift; sourceTree = "<group>"; };
+		213DB1B42DFD2FFA00BD10A1 /* InmueblesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmueblesViewModel.swift; sourceTree = "<group>"; };
+		213DB1B62DFD301D00BD10A1 /* InmueblesDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmueblesDashboardView.swift; sourceTree = "<group>"; };
+		213DB1BA2DFD338900BD10A1 /* InmuebleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmuebleRowView.swift; sourceTree = "<group>"; };
+		213DB1BC2DFD33BC00BD10A1 /* InmuebleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmuebleDetailView.swift; sourceTree = "<group>"; };
+		213DB1C02DFD340F00BD10A1 /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		213DB1C22DFD3E3500BD10A1 /* InquilinosDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquilinosDashboardView.swift; sourceTree = "<group>"; };
+		213DB1C42DFD3F0100BD10A1 /* HistorialInquilino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialInquilino.swift; sourceTree = "<group>"; };
+		213DB1C62DFD3F1400BD10A1 /* EditarInquilinoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarInquilinoView.swift; sourceTree = "<group>"; };
+		213DB1C72DFD3F1400BD10A1 /* InquilinoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquilinoDetailView.swift; sourceTree = "<group>"; };
+		213DB1CA2DFD3F8200BD10A1 /* EstadoPago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadoPago.swift; sourceTree = "<group>"; };
 		2163A0052DB9FA7B00748106 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2163A0092DBA09C800748106 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		21BA7E8F2D61B36B008EE413 /* PropifyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropifyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BA7E922D61B36B008EE413 /* PropifyManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerApp.swift; sourceTree = "<group>"; };
-		21BA7E942D61B36B008EE413 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		21BA7E962D61B36C008EE413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21BA7E992D61B36C008EE413 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21BA7E9F2D61B36C008EE413 /* PropifyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropifyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,14 +88,11 @@
 		21BA7EA92D61B36C008EE413 /* PropifyManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropifyManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BA7EAD2D61B36C008EE413 /* PropifyManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerUITests.swift; sourceTree = "<group>"; };
 		21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropifyManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsDashboard.swift; sourceTree = "<group>"; };
 		21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21BA7EC02D61B39C008EE413 /* Inquilino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inquilino.swift; sourceTree = "<group>"; };
 		21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDashBoardView.swift; sourceTree = "<group>"; };
-		21BA7EC42D61B39C008EE413 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		21BA7EC92D61B39C008EE413 /* AddTenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTenant.swift; sourceTree = "<group>"; };
 		21BA7ECB2D61B39C008EE413 /* ContractView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractView.swift; sourceTree = "<group>"; };
-		21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailView.swift; sourceTree = "<group>"; };
 		21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDetailView.swift; sourceTree = "<group>"; };
 		21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTicketView.swift; sourceTree = "<group>"; };
 		21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenantViewModel.swift; sourceTree = "<group>"; };
@@ -105,18 +127,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2163A0042DB9FA6C00748106 /* Welcome */ = {
+		213DB1A02DFD247400BD10A1 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		213DB1A12DFD262300BD10A1 /* Departamentos */ = {
+			isa = PBXGroup;
+			children = (
+				213DB1C02DFD340F00BD10A1 /* StatCard.swift */,
+				213DB1BC2DFD33BC00BD10A1 /* InmuebleDetailView.swift */,
+				213DB1BA2DFD338900BD10A1 /* InmuebleRowView.swift */,
+				213DB1B62DFD301D00BD10A1 /* InmueblesDashboardView.swift */,
+			);
+			path = Departamentos;
+			sourceTree = "<group>";
+		};
+		213DB1A22DFD263200BD10A1 /* Inquilinos */ = {
+			isa = PBXGroup;
+			children = (
+				213DB1C62DFD3F1400BD10A1 /* EditarInquilinoView.swift */,
+				213DB1C72DFD3F1400BD10A1 /* InquilinoDetailView.swift */,
+				213DB1C22DFD3E3500BD10A1 /* InquilinosDashboardView.swift */,
+				21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */,
+			);
+			path = Inquilinos;
+			sourceTree = "<group>";
+		};
+		213DB1A32DFD263B00BD10A1 /* Contratos */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ECB2D61B39C008EE413 /* ContractView.swift */,
+			);
+			path = Contratos;
+			sourceTree = "<group>";
+		};
+		213DB1A42DFD265600BD10A1 /* Pagos */ = {
+			isa = PBXGroup;
+			children = (
+				21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */,
+			);
+			path = Pagos;
+			sourceTree = "<group>";
+		};
+		213DB1A52DFD26F300BD10A1 /* Gastos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gastos;
+			sourceTree = "<group>";
+		};
+		213DB1A62DFD28D300BD10A1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				213DB1A72DFD290E00BD10A1 /* MainTabView.swift */,
+				2163A0042DB9FA6C00748106 /* Login */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2163A0042DB9FA6C00748106 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				2163A0052DB9FA7B00748106 /* WelcomeView.swift */,
 				2163A0092DBA09C800748106 /* LoginView.swift */,
 			);
-			path = Welcome;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		2163A00D2DBA0BBC00748106 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				213DB1CA2DFD3F8200BD10A1 /* EstadoPago.swift */,
+				213DB1C42DFD3F0100BD10A1 /* HistorialInquilino.swift */,
+				213DB1AF2DFD2CAD00BD10A1 /* Pago.swift */,
+				213DB1AB2DFD2C2C00BD10A1 /* Contrato.swift */,
+				213DB1A92DFD2BF100BD10A1 /* Inmueble.swift */,
+				21BA7EC92D61B39C008EE413 /* AddTenant.swift */,
+				21BA7EC02D61B39C008EE413 /* Inquilino.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +215,8 @@
 		2163A00E2DBA0BC300748106 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				213DB1B42DFD2FFA00BD10A1 /* InmueblesViewModel.swift */,
+				21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -131,6 +224,13 @@
 		2163A00F2DBA0BCE00748106 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				213DB1A62DFD28D300BD10A1 /* Main */,
+				213DB1A52DFD26F300BD10A1 /* Gastos */,
+				213DB1A42DFD265600BD10A1 /* Pagos */,
+				213DB1A32DFD263B00BD10A1 /* Contratos */,
+				213DB1A22DFD263200BD10A1 /* Inquilinos */,
+				213DB1A12DFD262300BD10A1 /* Departamentos */,
+				213DB1A02DFD247400BD10A1 /* Dashboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +245,7 @@
 		2163A0112DBA0BDF00748106 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				213DB1AD2DFD2C6C00BD10A1 /* DateFormatter+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -153,8 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				21BA7E922D61B36B008EE413 /* PropifyManagerApp.swift */,
-				21BA7EC42D61B39C008EE413 /* AppViewModel.swift */,
-				21BA7E942D61B36B008EE413 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -188,12 +287,6 @@
 				2163A00F2DBA0BCE00748106 /* Views */,
 				2163A00E2DBA0BC300748106 /* ViewModels */,
 				2163A00D2DBA0BBC00748106 /* Models */,
-				2163A0042DB9FA6C00748106 /* Welcome */,
-				21BA7EBE2D61B39B008EE413 /* InmueblesDashboard */,
-				21BA7EC72D61B39C008EE413 /* MainDashboard */,
-				21BA7EBD2D61B39B008EE413 /* PaymentsDashboard */,
-				21BA7EC82D61B39C008EE413 /* ReportesDashboard */,
-				21BA7EDB2D61B39C008EE413 /* TenantDashboard */,
 				21BA7E962D61B36C008EE413 /* Assets.xcassets */,
 				21BA7EBF2D61B39B008EE413 /* GoogleService-Info.plist */,
 				21BA7E982D61B36C008EE413 /* Preview Content */,
@@ -224,186 +317,6 @@
 				21BA7EAF2D61B36C008EE413 /* PropifyManagerUITestsLaunchTests.swift */,
 			);
 			path = PropifyManagerUITests;
-			sourceTree = "<group>";
-		};
-		21BA7EBD2D61B39B008EE413 /* PaymentsDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EBC2D61B39B008EE413 /* PaymentsDashboard.swift */,
-			);
-			path = PaymentsDashboard;
-			sourceTree = "<group>";
-		};
-		21BA7EBE2D61B39B008EE413 /* InmueblesDashboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InmueblesDashboard;
-			sourceTree = "<group>";
-		};
-		21BA7EC12D61B39C008EE413 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EC02D61B39C008EE413 /* Inquilino.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		21BA7EC32D61B39C008EE413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EC22D61B39C008EE413 /* TenantDashBoardView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		21BA7EC52D61B39C008EE413 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		21BA7EC62D61B39C008EE413 /* TenantList */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EC12D61B39C008EE413 /* Model */,
-				21BA7EC32D61B39C008EE413 /* View */,
-				21BA7EC52D61B39C008EE413 /* ViewModel */,
-			);
-			path = TenantList;
-			sourceTree = "<group>";
-		};
-		21BA7EC72D61B39C008EE413 /* MainDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EC62D61B39C008EE413 /* TenantList */,
-			);
-			path = MainDashboard;
-			sourceTree = "<group>";
-		};
-		21BA7EC82D61B39C008EE413 /* ReportesDashboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReportesDashboard;
-			sourceTree = "<group>";
-		};
-		21BA7ECA2D61B39C008EE413 /* AddTenant */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7EC92D61B39C008EE413 /* AddTenant.swift */,
-				21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */,
-			);
-			path = AddTenant;
-			sourceTree = "<group>";
-		};
-		21BA7ECC2D61B39C008EE413 /* ContractView */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ECB2D61B39C008EE413 /* ContractView.swift */,
-			);
-			path = ContractView;
-			sourceTree = "<group>";
-		};
-		21BA7ECD2D61B39C008EE413 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		21BA7ECF2D61B39C008EE413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ECE2D61B39C008EE413 /* EditDetailView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		21BA7ED02D61B39C008EE413 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		21BA7ED12D61B39C008EE413 /* EditTenantInformationModule */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ECD2D61B39C008EE413 /* Model */,
-				21BA7ECF2D61B39C008EE413 /* View */,
-				21BA7ED02D61B39C008EE413 /* ViewModel */,
-			);
-			path = EditTenantInformationModule;
-			sourceTree = "<group>";
-		};
-		21BA7ED22D61B39C008EE413 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		21BA7ED42D61B39C008EE413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		21BA7ED52D61B39C008EE413 /* TenantDetailView */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ED22D61B39C008EE413 /* Model */,
-				21BA7ED42D61B39C008EE413 /* View */,
-			);
-			path = TenantDetailView;
-			sourceTree = "<group>";
-		};
-		21BA7ED62D61B39C008EE413 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		21BA7ED82D61B39C008EE413 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		21BA7ED92D61B39C008EE413 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		21BA7EDA2D61B39C008EE413 /* TicketOfPaymentModule */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ED62D61B39C008EE413 /* Model */,
-				21BA7ED82D61B39C008EE413 /* View */,
-				21BA7ED92D61B39C008EE413 /* ViewModel */,
-			);
-			path = TicketOfPaymentModule;
-			sourceTree = "<group>";
-		};
-		21BA7EDB2D61B39C008EE413 /* TenantDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				21BA7ECA2D61B39C008EE413 /* AddTenant */,
-				21BA7ECC2D61B39C008EE413 /* ContractView */,
-				21BA7ED12D61B39C008EE413 /* EditTenantInformationModule */,
-				21BA7ED52D61B39C008EE413 /* TenantDetailView */,
-				21BA7EDA2D61B39C008EE413 /* TicketOfPaymentModule */,
-			);
-			path = TenantDashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,20 +459,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213DB1B72DFD301D00BD10A1 /* InmueblesDashboardView.swift in Sources */,
 				21BA7EE12D61B39C008EE413 /* AddTenant.swift in Sources */,
 				21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */,
+				213DB1C12DFD340F00BD10A1 /* StatCard.swift in Sources */,
+				213DB1AE2DFD2C8400BD10A1 /* DateFormatter+Extensions.swift in Sources */,
+				213DB1B52DFD2FFA00BD10A1 /* InmueblesViewModel.swift in Sources */,
+				213DB1AA2DFD2BFA00BD10A1 /* Inmueble.swift in Sources */,
+				213DB1BB2DFD338900BD10A1 /* InmuebleRowView.swift in Sources */,
+				213DB1C82DFD3F1400BD10A1 /* EditarInquilinoView.swift in Sources */,
+				213DB1C92DFD3F1400BD10A1 /* InquilinoDetailView.swift in Sources */,
 				21BA7EE42D61B39C008EE413 /* TenantDetailView.swift in Sources */,
-				21BA7E952D61B36B008EE413 /* ContentView.swift in Sources */,
 				21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */,
-				21BA7EE32D61B39C008EE413 /* EditDetailView.swift in Sources */,
 				21BA7EF02D65113B008EE413 /* AddTenantViewModel.swift in Sources */,
+				213DB1AC2DFD2C3200BD10A1 /* Contrato.swift in Sources */,
 				2163A0062DB9FA8400748106 /* WelcomeView.swift in Sources */,
+				213DB1A82DFD291300BD10A1 /* MainTabView.swift in Sources */,
+				213DB1C52DFD3F0100BD10A1 /* HistorialInquilino.swift in Sources */,
+				213DB1CB2DFD3F8200BD10A1 /* EstadoPago.swift in Sources */,
+				213DB1BD2DFD33BC00BD10A1 /* InmuebleDetailView.swift in Sources */,
 				2163A00A2DBA09C800748106 /* LoginView.swift in Sources */,
+				213DB1C32DFD3E3500BD10A1 /* InquilinosDashboardView.swift in Sources */,
 				21BA7EDE2D61B39C008EE413 /* Inquilino.swift in Sources */,
 				21BA7E932D61B36B008EE413 /* PropifyManagerApp.swift in Sources */,
-				21BA7EE02D61B39C008EE413 /* AppViewModel.swift in Sources */,
 				21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */,
-				21BA7EDC2D61B39C008EE413 /* PaymentsDashboard.swift in Sources */,
+				213DB1B02DFD2CB200BD10A1 /* Pago.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

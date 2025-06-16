@@ -11,7 +11,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isSecure: Bool = true
-    @EnvironmentObject var viewModel: AppViewModel
+//    @EnvironmentObject var viewModel: AppViewModel
 
     var body: some View {
         VStack(spacing: 32) {
@@ -54,7 +54,7 @@ struct LoginView: View {
 
             Button(action: {
                 // Aquí puedes agregar tu lógica de autenticación
-                viewModel.isAuthenticated = true
+//                viewModel.isAuthenticated = true
                 print("Iniciando sesión con \(email)")
             }) {
                 Text("Entrar")
