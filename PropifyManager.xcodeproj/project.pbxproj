@@ -37,11 +37,15 @@
 		21BA7EE22D61B39C008EE413 /* ContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ECB2D61B39C008EE413 /* ContractView.swift */; };
 		21BA7EE42D61B39C008EE413 /* TenantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */; };
 		21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */; };
-		21BA7EE82D61B412008EE413 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EE72D61B412008EE413 /* FirebaseAnalytics */; };
-		21BA7EEA2D61B412008EE413 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */; };
-		21BA7EEC2D61B412008EE413 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EEB2D61B412008EE413 /* FirebaseDatabase */; };
-		21BA7EEE2D61B412008EE413 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 21BA7EED2D61B412008EE413 /* FirebaseFirestore */; };
 		21BA7EF02D65113B008EE413 /* AddTenantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */; };
+		21F6DD452E0B47D600A3681B /* ComprobanteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD422E0B47D600A3681B /* ComprobanteView.swift */; };
+		21F6DD462E0B47D600A3681B /* AgregarGastoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD402E0B47D600A3681B /* AgregarGastoView.swift */; };
+		21F6DD472E0B47D600A3681B /* PagosDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD432E0B47D600A3681B /* PagosDashboardView.swift */; };
+		21F6DD482E0B47D600A3681B /* ReporteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD442E0B47D600A3681B /* ReporteView.swift */; };
+		21F6DD492E0B47D600A3681B /* AgregarPagoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD412E0B47D600A3681B /* AgregarPagoView.swift */; };
+		21F6DD4B2E0B480400A3681B /* PagosDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD4A2E0B480400A3681B /* PagosDashboardViewModel.swift */; };
+		21F6DD4E2E0B48C000A3681B /* ResumenFinanciero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD4D2E0B48C000A3681B /* ResumenFinanciero.swift */; };
+		21F6DD4F2E0B48C000A3681B /* Gasto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6DD4C2E0B48C000A3681B /* Gasto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,14 @@
 		21BA7ED32D61B39C008EE413 /* TenantDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantDetailView.swift; sourceTree = "<group>"; };
 		21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTicketView.swift; sourceTree = "<group>"; };
 		21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenantViewModel.swift; sourceTree = "<group>"; };
+		21F6DD402E0B47D600A3681B /* AgregarGastoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarGastoView.swift; sourceTree = "<group>"; };
+		21F6DD412E0B47D600A3681B /* AgregarPagoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPagoView.swift; sourceTree = "<group>"; };
+		21F6DD422E0B47D600A3681B /* ComprobanteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprobanteView.swift; sourceTree = "<group>"; };
+		21F6DD432E0B47D600A3681B /* PagosDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosDashboardView.swift; sourceTree = "<group>"; };
+		21F6DD442E0B47D600A3681B /* ReporteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporteView.swift; sourceTree = "<group>"; };
+		21F6DD4A2E0B480400A3681B /* PagosDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagosDashboardViewModel.swift; sourceTree = "<group>"; };
+		21F6DD4C2E0B48C000A3681B /* Gasto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gasto.swift; sourceTree = "<group>"; };
+		21F6DD4D2E0B48C000A3681B /* ResumenFinanciero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenFinanciero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21BA7EEC2D61B412008EE413 /* FirebaseDatabase in Frameworks */,
-				21BA7EEE2D61B412008EE413 /* FirebaseFirestore in Frameworks */,
-				21BA7EE82D61B412008EE413 /* FirebaseAnalytics in Frameworks */,
-				21BA7EEA2D61B412008EE413 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +176,11 @@
 		213DB1A42DFD265600BD10A1 /* Pagos */ = {
 			isa = PBXGroup;
 			children = (
+				21F6DD402E0B47D600A3681B /* AgregarGastoView.swift */,
+				21F6DD412E0B47D600A3681B /* AgregarPagoView.swift */,
+				21F6DD422E0B47D600A3681B /* ComprobanteView.swift */,
+				21F6DD432E0B47D600A3681B /* PagosDashboardView.swift */,
+				21F6DD442E0B47D600A3681B /* ReporteView.swift */,
 				21BA7ED72D61B39C008EE413 /* PaymentTicketView.swift */,
 			);
 			path = Pagos;
@@ -201,6 +214,8 @@
 		2163A00D2DBA0BBC00748106 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				21F6DD4C2E0B48C000A3681B /* Gasto.swift */,
+				21F6DD4D2E0B48C000A3681B /* ResumenFinanciero.swift */,
 				213DB1CA2DFD3F8200BD10A1 /* EstadoPago.swift */,
 				213DB1C42DFD3F0100BD10A1 /* HistorialInquilino.swift */,
 				213DB1AF2DFD2CAD00BD10A1 /* Pago.swift */,
@@ -215,6 +230,7 @@
 		2163A00E2DBA0BC300748106 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				21F6DD4A2E0B480400A3681B /* PagosDashboardViewModel.swift */,
 				213DB1B42DFD2FFA00BD10A1 /* InmueblesViewModel.swift */,
 				21BA7EEF2D65113B008EE413 /* AddTenantViewModel.swift */,
 			);
@@ -336,10 +352,6 @@
 			);
 			name = PropifyManager;
 			packageProductDependencies = (
-				21BA7EE72D61B412008EE413 /* FirebaseAnalytics */,
-				21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */,
-				21BA7EEB2D61B412008EE413 /* FirebaseDatabase */,
-				21BA7EED2D61B412008EE413 /* FirebaseFirestore */,
 			);
 			productName = PropifyManager;
 			productReference = 21BA7E8F2D61B36B008EE413 /* PropifyManager.app */;
@@ -414,7 +426,6 @@
 			);
 			mainGroup = 21BA7E862D61B36B008EE413;
 			packageReferences = (
-				21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 21BA7E902D61B36B008EE413 /* Products */;
 			projectDirPath = "";
@@ -464,6 +475,11 @@
 				21BA7EE52D61B39C008EE413 /* PaymentTicketView.swift in Sources */,
 				213DB1C12DFD340F00BD10A1 /* StatCard.swift in Sources */,
 				213DB1AE2DFD2C8400BD10A1 /* DateFormatter+Extensions.swift in Sources */,
+				21F6DD452E0B47D600A3681B /* ComprobanteView.swift in Sources */,
+				21F6DD462E0B47D600A3681B /* AgregarGastoView.swift in Sources */,
+				21F6DD472E0B47D600A3681B /* PagosDashboardView.swift in Sources */,
+				21F6DD482E0B47D600A3681B /* ReporteView.swift in Sources */,
+				21F6DD492E0B47D600A3681B /* AgregarPagoView.swift in Sources */,
 				213DB1B52DFD2FFA00BD10A1 /* InmueblesViewModel.swift in Sources */,
 				213DB1AA2DFD2BFA00BD10A1 /* Inmueble.swift in Sources */,
 				213DB1BB2DFD338900BD10A1 /* InmuebleRowView.swift in Sources */,
@@ -473,9 +489,12 @@
 				21BA7EDF2D61B39C008EE413 /* TenantDashBoardView.swift in Sources */,
 				21BA7EF02D65113B008EE413 /* AddTenantViewModel.swift in Sources */,
 				213DB1AC2DFD2C3200BD10A1 /* Contrato.swift in Sources */,
+				21F6DD4E2E0B48C000A3681B /* ResumenFinanciero.swift in Sources */,
+				21F6DD4F2E0B48C000A3681B /* Gasto.swift in Sources */,
 				2163A0062DB9FA8400748106 /* WelcomeView.swift in Sources */,
 				213DB1A82DFD291300BD10A1 /* MainTabView.swift in Sources */,
 				213DB1C52DFD3F0100BD10A1 /* HistorialInquilino.swift in Sources */,
+				21F6DD4B2E0B480400A3681B /* PagosDashboardViewModel.swift in Sources */,
 				213DB1CB2DFD3F8200BD10A1 /* EstadoPago.swift in Sources */,
 				213DB1BD2DFD33BC00BD10A1 /* InmuebleDetailView.swift in Sources */,
 				2163A00A2DBA09C800748106 /* LoginView.swift in Sources */,
@@ -827,40 +846,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.8.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		21BA7EE72D61B412008EE413 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		21BA7EE92D61B412008EE413 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		21BA7EEB2D61B412008EE413 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		21BA7EED2D61B412008EE413 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21BA7EE62D61B412008EE413 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21BA7E872D61B36B008EE413 /* Project object */;
 }

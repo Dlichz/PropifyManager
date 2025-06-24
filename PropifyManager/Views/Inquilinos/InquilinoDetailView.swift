@@ -54,7 +54,7 @@ struct InquilinoDetailView: View {
                 case 2:
                     if let resumenId = inquilino.resumenId,
                        let resumen = viewModel.resumen {
-                        HistorialPagosView(pagos: resumen.pagos)
+                        HistorialPagosView2(pagos: resumen.pagos)
                     } else {
                         Text("No hay pagos registrados")
                             .foregroundColor(.secondary)
@@ -191,7 +191,7 @@ struct HistorialContratosView: View {
     }
 }
 
-struct HistorialPagosView: View {
+struct HistorialPagosView2: View {
     let pagos: [Pago]
     
     var body: some View {

@@ -43,7 +43,7 @@ struct Direccion: Hashable, Identifiable, Codable {
     let id: UUID
     let calle: String
     let numeroExterior: String
-    let numeroInterior: String
+    let numeroInterior: String?
     let colonia: String
     let municipio: String
     let estado: String

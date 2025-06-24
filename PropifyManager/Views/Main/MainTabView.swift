@@ -16,11 +16,15 @@ struct MainTabView: View {
                 }
             InmueblesDashboardView()
                 .tabItem {
-                    Label("Inicio", systemImage: "building.2.fill")
+                    Label("Inmuebles", systemImage: "building.2.fill")
                 }
             InquilinosDashboardView()
                 .tabItem {
-                    Label("Inicio", systemImage: "person.fill")
+                    Label("Inquilinos", systemImage: "person.fill")
+                }
+            PagosDashboardView()
+                .tabItem {
+                    Label("Pagos", systemImage: "dollarsign.circle.fill")
                 }
         }
     }

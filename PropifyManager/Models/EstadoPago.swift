@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum EstadoPago: String, Codable {
+enum EstadoPago: String, Codable, CaseIterable {
     case current = "Al Corriente"
     case upcoming = "Próximo"
     case overdue = "Atrasado"

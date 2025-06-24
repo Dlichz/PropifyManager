@@ -14,14 +14,16 @@ struct Pago: Hashable, Identifiable, Codable {
     var monto: Double
     var notas: String?
     var estado: EstadoPago
+    var comprobante: String?
     
-    init(id: UUID = UUID(), contratoID: UUID, fechaPago: Date, monto: Double, notas: String? = nil, estado: EstadoPago = .current) {
+    init(id: UUID = UUID(), contratoID: UUID, fechaPago: Date, monto: Double, notas: String? = nil, estado: EstadoPago = .current, comprobante: String? = nil) {
         self.id = id
         self.contratoID = contratoID
         self.fechaPago = fechaPago
         self.monto = monto
         self.notas = notas
         self.estado = estado
+        self.comprobante = comprobante
     }
 }
 
